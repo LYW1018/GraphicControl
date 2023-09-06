@@ -189,3 +189,43 @@ Route::get('/level_23', function () {
    echo strlen('car accident').'<br>';
    echo strpos("car accident","car");
 });
+Route::get('/level_24', function () {
+    $collection = collect(['account_id' => 1, 'product' => 'Desk']);
+    dd($collection->has('email')); // false
+});
+Route::get('/level_25', function () {
+    dd(collect([])->isEmpty()); // true
+});
+Route::get('/level_26', function () {
+    $collection = collect([1, 2, 3, 4, 5]);
+    $multiplied = $collection->map(function ($item, $key) {
+        return $item * 2;
+    });
+    dd($multiplied->all()); // [2, 4, 6, 8, 10]
+});
+Route::get('/level_27', function () {
+    $collection = collect([1, 2, 3, 4]);
+    $collection->push(5);
+    dd($collection->all()); // [1, 2, 3, 4, 5]
+});
+Route::get('/level_28', function () {
+    $collection = collect(['product_id' => 'prod-100', 'name' => 'Desk']);
+    $collection->pull('name'); // 'Desk'
+    dd($collection->all()); // ['product_id' => 'prod-100']
+});
+Route::get('/level_29', function () {
+    $collection = collect([
+        ['product' => 'Desk', 'price' => 200],
+        ['product' => 'Chair', 'price' => 100],
+        ['product' => 'Bookcase', 'price' => 150],
+        ['product' => 'Door', 'price' => 100],
+    ]);
+    $filtered = $collection->where('price', 100);
+    dd($filtered->all());
+});
+/*
+[
+    ['product' => 'Chair', 'price' => 100],
+    ['product' => 'Door', 'price' => 100],
+]
+*/
