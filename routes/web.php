@@ -241,5 +241,5 @@ Route::post('/A2', [DashboardController::class, 'A2'])->name('A2');
 Route::get('/GetAll', [DashboardController::class, 'GetAll'])->name('GetAll');
 Route::get('/BitcellsByAddress', [DashboardController::class, 'BitcellsByAddress'])->name('BitcellsByAddress');
 Route::post('/ins_A', [DashboardController::class, 'ins_A'])->name('ins_A');
-//Route::put('/upd_B', [DashboardController::class, 'upd_B'])->name('upd_B');
-//Route::delete('/del_C', [DashboardController::class, 'del_C'])->name('del_C');
+Route::put('/upd_B', [DashboardController::class, 'upd_B'])->name('upd_B');
+Route::delete('/del_C', [DashboardController::class, 'del_C'])->name('del_C');
