@@ -3,7 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/dashboard', [DashboardController::class, 'WebIndex'])->name('Dashboard.WebIndex');
+//Route::get('/dashboard', [DashboardController::class, 'WebIndex'])->name('Dashboard.WebIndex');
 
 Route::get('/', function () {
     return view('welcome');
@@ -229,3 +229,17 @@ Route::get('/level_29', function () {
     ['product' => 'Door', 'price' => 100],
 ]
 */
+
+Route::get('/csrf', function () {
+    return csrf_token();
+});
+
+Route::get('/A1', [DashboardController::class, 'A1'])->name('A1');
+Route::post('/A2', [DashboardController::class, 'A2'])->name('A2');
+
+
+Route::get('/GetAll', [DashboardController::class, 'GetAll'])->name('GetAll');
+Route::get('/BitcellsByAddress', [DashboardController::class, 'BitcellsByAddress'])->name('BitcellsByAddress');
+Route::post('/ins_A', [DashboardController::class, 'ins_A'])->name('ins_A');
+//Route::put('/upd_B', [DashboardController::class, 'upd_B'])->name('upd_B');
+//Route::delete('/del_C', [DashboardController::class, 'del_C'])->name('del_C');
