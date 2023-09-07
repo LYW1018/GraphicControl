@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function js(){
+      return  view('Tmpjs');
+    }
+
 //Del_刪除所指定的Guid
     public function del_C(Request $request){
         $TmpResponseService = new ResponseService();

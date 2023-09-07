@@ -243,3 +243,4 @@ Route::get('/BitcellsByAddress', [DashboardController::class, 'BitcellsByAddress
 Route::post('/ins_A', [DashboardController::class, 'ins_A'])->name('ins_A');
 Route::put('/upd_B', [DashboardController::class, 'upd_B'])->name('upd_B');
 Route::delete('/del_C', [DashboardController::class, 'del_C'])->name('del_C');
+Route::get('/js', [DashboardController::class, 'js'])->name('js');
