@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/ins_A','/upd_B','del_C'
+
     ];
 }
