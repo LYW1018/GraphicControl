@@ -37,7 +37,7 @@
         </div>
     </div>
 </div>
-
+{{--彈跳視窗--}}
 @yield('Modal')
 
 <script src="/lib/jQuery/jquery.min.js"></script>
