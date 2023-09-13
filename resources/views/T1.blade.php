@@ -855,7 +855,7 @@
 </html>
 
 
-
+{{--網頁格式位置設置--}}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -916,5 +916,126 @@
     <div class="font box box_long">9</div>
     <div class="font box box_normal">10</div>
 </div>
+</body>
+</html>
+
+
+
+{{--這是一個帶有內容的方塊--}}
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding 1</title>
+    <style>
+        .box {
+            /*內距*/
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">這是一個帶有內容的方塊。</div>
+</body>
+</html>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #blue {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        #pink {
+            /*position: relative;*/
+            top: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        #block {
+            /*position: absolute;*/
+            /*position: fixed;*/
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<div id="blue"></div>
+<div id="pink">
+    <div id="block">block</div>
+</div>
+</body>
+</html>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100vh;
+            display: flex;
+        }
+
+        .wrap .box:nth-of-type(odd) {
+            /* 選取奇數 */
+            background-color: #ddd;
+        }
+
+        .wrap .box:nth-of-type(even) {
+            /* 選取偶數 */
+            background-color: #aaa;
+        }
+
+        .sticky {
+            width: 100px;
+            font-size: 15px;
+            height: 100px;
+            background-color: red;
+            color: #fff;
+            position: sticky;
+            top: 10px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+<section class="wrap">
+    <div class="box">
+        <div class="sticky">Sticky 1</div>
+    </div>
+    <div class="box">
+        <div class="sticky">Sticky 2</div>
+    </div>
+    <div class="box">
+        <div class="sticky">Sticky 3</div>
+    </div>
+    <div class="box">
+        <div class="sticky">Sticky 4</div>
+    </div>
+</section>
+<script src="https://tw.live/np/kenting/"></script>
 </body>
 </html>
