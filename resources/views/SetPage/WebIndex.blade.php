@@ -9,7 +9,7 @@
     <div class="row mx-0 justify-content-between">
         <div class="row mx-0 col-6 ps-0 pe-3">
             <label class="sub">金鑰</label>
-            <input id="Input_Line" value={{$LineToken}} class="form-control">
+            <input id="Input_Line" value="{{$LineToken}}" class="form-control">
         </div>
         <div class="col-auto align-middle">
             <button id="BtnLine" data-guid="{{$LineGuid}}" class="btn btn_main">更新</button>

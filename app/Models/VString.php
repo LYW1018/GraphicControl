@@ -10,7 +10,7 @@ class VString extends Model
 
     protected $casts = [
         'CollectData' => 'json',
-        'NotifyCollectData' => 'jsoon',
+        'NotifyCollectData' => 'json',
     ];
 
     protected $fillable = [
